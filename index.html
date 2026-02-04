@@ -13,13 +13,15 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Laundry Holic Surabaya - Express 1 Jam & 24 Jam">
     <meta property="og:description" content="Solusi baju kotor mendadak? Laundry 1 Jam Selesai. Antar Jemput Murah Rp 10rb se-Surabaya.">
-    <meta property="og:image" content="https://laundryholicsurabaya.com/assets/img/logo.png"> <script type="application/ld+json">
+    <meta property="og:image" content="logo-300x300-removebg-preview-1.png"> 
+
+    <script type="application/ld+json">
     [
         {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Laundry Holic Surabaya",
-            "image": "https://laundryholicsurabaya.com/assets/img/logo.png",
+            "image": "https://laundry-express-surabaya.vercel.app/logo-300x300-removebg-preview-1.png",
             "telephone": "+6282142313133",
             "url": "https://laundry-express-surabaya.vercel.app/",
             "address": {
@@ -41,30 +43,7 @@
                 "opens": "00:00",
                 "closes": "23:59"
             },
-            "priceRange": "Rp 7.000 - Rp 50.000",
-            "areaServed": ["Surabaya", "Tambaksari", "Pacarkembang", "Gubeng", "Mulyorejo"]
-        },
-        {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Apakah ada layanan Laundry Kilat 1 Jam di Surabaya?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Ya, Laundry Holic Surabaya menyediakan layanan Super Express 1 Jam selesai (Cuci Kering Lipat) yang bisa ditunggu."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Berapa biaya antar jemput laundry?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Biaya antar jemput flat murah hanya Rp 10.000 untuk area jangkauan kami."
-                    }
-                }
-            ]
+            "priceRange": "Rp 7.000 - Rp 50.000"
         }
     ]
     </script>
@@ -91,300 +70,253 @@
             line-height: 1.6;
             color: var(--text-dark);
             background-color: var(--bg-light);
-            padding-bottom: 80px; /* Space for Sticky CTA */
+            padding-bottom: 90px; /* Space for Sticky CTA */
         }
         
         /* TYPOGRAPHY */
         h1, h2, h3 { line-height: 1.2; font-weight: 800; margin-bottom: 1rem; color: var(--primary-dark); }
-        h1 { font-size: 2.25rem; letter-spacing: -0.025em; }
-        h2 { font-size: 1.875rem; text-align: center; margin-top: 3rem; }
+        h1 { font-size: 2rem; letter-spacing: -0.025em; }
+        h2 { font-size: 1.75rem; text-align: center; margin-top: 3rem; position: relative; padding-bottom: 10px; }
+        h2::after { content: ''; display: block; width: 60px; height: 4px; background: var(--accent); margin: 10px auto 0; border-radius: 2px; }
         h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
         p { margin-bottom: 1rem; color: var(--text-grey); }
         a { text-decoration: none; color: inherit; transition: 0.2s; }
-        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; border-radius: var(--radius); }
 
         /* UTILITIES */
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 1.25rem; } /* Max width 800px for better reading on desktop */
         .text-center { text-align: center; }
-        .text-bold { font-weight: 700; }
-        .flex-center { display: flex; align-items: center; justify-content: center; }
         .grid { display: grid; gap: 1.5rem; }
-        .mt-2 { margin-top: 2rem; }
-
-        /* HERO SECTION (CSS GRADIENT - NO IMAGE LCP) */
+        
+        /* HEADER & HERO */
+        header { background: var(--white); box-shadow: var(--shadow); position: sticky; top: 0; z-index: 40; padding: 0.5rem 0; }
+        .nav-container { display: flex; align-items: center; justify-content: space-between; }
+        .logo-img { height: 50px; width: auto; }
+        
         .hero {
-            background: linear-gradient(135deg, var(--white) 0%, #e0f2fe 100%);
-            padding: 4rem 1.5rem;
             text-align: center;
-            border-bottom-left-radius: 40px;
-            border-bottom-right-radius: 40px;
-            box-shadow: var(--shadow);
+            padding: 2rem 1.25rem;
+            background: linear-gradient(180deg, #ffffff 0%, #e0f2fe 100%);
         }
-        .hero-badge {
-            display: inline-block;
-            background: #fee2e2; color: #dc2626;
-            padding: 0.25rem 1rem; border-radius: 99px;
-            font-size: 0.875rem; font-weight: 700;
-            margin-bottom: 1rem; text-transform: uppercase;
+        .hero-banner {
+            width: 100%;
+            max-height: 250px; /* Limit height on desktop */
+            object-fit: cover;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
         }
         
         /* BUTTONS */
         .btn {
-            display: inline-flex; align-items: center; gap: 0.5rem;
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
             padding: 1rem 2rem; border-radius: 99px;
             font-weight: 700; font-size: 1.125rem;
             color: var(--white);
             transition: transform 0.2s;
+            width: 100%;
+            max-width: 350px;
         }
         .btn-primary {
             background: linear-gradient(to right, var(--primary), var(--accent));
-            box-shadow: 0 10px 15px -3px rgba(0, 86, 179, 0.3);
+            box-shadow: 0 10px 20px -5px rgba(0, 86, 179, 0.4);
         }
-        .btn-primary:hover { transform: translateY(-2px); }
+        .btn-primary:active { transform: scale(0.98); }
+        
         .btn-wa-sticky {
-            position: fixed; bottom: 1.5rem; right: 1.5rem;
+            position: fixed; bottom: 1.5rem; right: 1.5rem; left: 1.5rem;
             background-color: var(--success);
             z-index: 50;
             box-shadow: 0 10px 15px -3px rgba(37, 211, 102, 0.4);
             animation: pulse 2s infinite;
+            margin: 0 auto;
+        }
+        @media (min-width: 640px) {
+            .btn-wa-sticky { width: auto; left: auto; right: 2rem; padding: 1rem 2rem; }
         }
 
-        /* BENTO GRID SERVICES */
-        .service-grid {
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            margin-top: 2rem;
-        }
+        /* SERVICES & CARDS */
+        .service-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
         .card {
-            background: var(--white);
-            padding: 2rem;
+            background: var(--white); padding: 1.5rem;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
             border: 1px solid rgba(0,0,0,0.05);
         }
-        .card-icon {
-            width: 3rem; height: 3rem;
-            background: #e0f2fe; color: var(--primary);
-            border-radius: 12px;
-            display: flex; align-items: center; justify-content: center;
-            margin-bottom: 1rem;
-        }
-        .card-highlight { border: 2px solid var(--accent); background: #f0f9ff; }
-
-        /* PRICING TABLE */
-        .pricing-table {
-            background: var(--white);
+        .promo-img {
+            width: 100%; height: auto;
             border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+            border: 2px solid var(--accent);
+        }
+
+        /* PRICING */
+        .pricing-table {
+            background: var(--white); border-radius: var(--radius);
+            overflow: hidden; box-shadow: var(--shadow);
         }
         .pricing-row {
-            display: flex; justify-content: space-between;
-            padding: 1rem 1.5rem;
-            border-bottom: 1px solid #f3f4f6;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 1.25rem; border-bottom: 1px solid #f3f4f6;
         }
         .pricing-row:last-child { border-bottom: none; }
-        .price { font-weight: 700; color: var(--primary); }
-        .section-header {
-            background: var(--primary-dark); color: var(--white);
-            padding: 0.75rem; text-align: center; font-weight: 700;
-        }
+        .price-val { font-weight: 800; color: var(--primary); font-size: 1.1rem; }
 
-        /* MAP FACADE (SPEED 100 TRICK) */
-        .map-placeholder {
-            background-color: #e5e7eb;
-            height: 250px;
-            border-radius: var(--radius);
-            display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
-            color: var(--text-grey);
-            margin-top: 1rem;
-            text-align: center;
-            border: 2px dashed #d1d5db;
+        /* LOCATION & SHOP PHOTO */
+        .shop-photo {
+            width: 100%; max-height: 400px; object-fit: cover;
+            border-radius: var(--radius); margin-bottom: 1rem;
         }
         .map-btn {
-            margin-top: 10px; padding: 8px 16px; background: var(--white);
-            border-radius: 20px; font-weight: bold; font-size: 0.9rem;
-            color: var(--primary); box-shadow: var(--shadow);
+            display: block; width: 100%; padding: 12px;
+            background: var(--white); border: 2px solid var(--primary);
+            color: var(--primary); text-align: center; font-weight: 700;
+            border-radius: var(--radius); margin-top: 10px;
         }
 
-        /* DISCREET SEO FOOTER (WHITE HAT) */
+        /* SEO FOOTER */
         .seo-footer {
-            background-color: #f9fafb;
-            padding: 3rem 1.5rem 6rem; /* Extra padding bottom for sticky btn */
-            margin-top: 4rem;
-            border-top: 1px solid #e5e7eb;
+            background-color: #f9fafb; padding: 3rem 1.25rem 6rem;
+            margin-top: 4rem; border-top: 1px solid #e5e7eb; font-size: 0.75rem; color: #9ca3af;
         }
-        .seo-title {
-            font-size: 0.875rem; font-weight: 700; color: #9ca3af;
-            text-transform: uppercase; margin-bottom: 1rem;
-        }
-        .seo-links {
-            display: flex; flex-wrap: wrap; gap: 0.5rem;
-            font-size: 0.75rem; color: #6b7280;
-        }
-        .seo-tag {
-            background: #e5e7eb; padding: 2px 8px; border-radius: 4px;
-        }
+        .seo-tags span { display: inline-block; background: #e5e7eb; padding: 2px 6px; margin: 2px; border-radius: 4px; }
 
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.03); }
             100% { transform: scale(1); }
-        }
-
-        /* RESPONSIVE */
-        @media (min-width: 768px) {
-            h1 { font-size: 3.5rem; }
-            .hero { padding: 6rem 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <header class="hero">
-        <div class="container">
-            <span class="hero-badge">🔥 BUKA 24 JAM NON-STOP</span>
-            <h1>Jasa Laundry Surabaya <br><span style="color: var(--primary);">Express & Terpercaya</span></h1>
-            <p style="font-size: 1.25rem; max-width: 600px; margin: 1rem auto;">
-                Cucian numpuk? Butuh cepat? Kami jemput & antar! 
-                Mulai dari <b>Kilat 1 Jam</b> hingga <b>Cuci Karpet</b>. Garansi bersih & wangi.
-            </p>
-            <div class="mt-2">
-                <a href="https://wa.me/6282142313133?text=Halo%20Admin,%20mau%20pesan%20laundry%20antar%20jemput" class="btn btn-primary" aria-label="Pesan Laundry via WhatsApp">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    PANGGIL KURIR SEKARANG
-                </a>
-            </div>
-            <div style="margin-top: 1rem; font-size: 0.9rem; color: #64748b;">
-                ⭐ 4.9/5 Rating Google Review | 📍 Pacarkembang & Tambaksari
-            </div>
+    <header>
+        <div class="container nav-container">
+            <img src="logo-300x300-removebg-preview-1.png" alt="Logo Laundry Holic Surabaya" class="logo-img" width="50" height="50">
+            <span style="font-weight: 800; color: var(--primary); font-size: 1.2rem;">LAUNDRY HOLIC</span>
         </div>
     </header>
 
+    <section class="hero">
+        <div class="container">
+            <img src="Screenshot_4.png" alt="Laundry Antar Jemput Surabaya" class="hero-banner" width="800" height="300" loading="eager">
+            
+            <h1 class="text-center">Jasa Laundry Surabaya <span style="color: var(--primary);">Express & 24 Jam</span></h1>
+            <p class="text-center">Solusi cucian numpuk? Butuh cepat 1 Jam? Kami jemput & antar! Garansi bersih, wangi, & rapi.</p>
+            
+            <div class="text-center" style="margin-top: 1.5rem;">
+                <a href="https://wa.me/6282142313133?text=Halo%20Admin,%20mau%20pesan%20laundry%20antar%20jemput" class="btn btn-primary">
+                    PANGGIL KURIR SEKARANG 🚀
+                </a>
+            </div>
+        </div>
+    </section>
+
     <main class="container">
         
-        <section id="layanan">
+        <section id="layanan" class="mt-2" style="margin-top: 3rem;">
             <h2>Layanan Unggulan</h2>
+            
+            <img src="Laundry_Antar_Jemput-transformed.jpeg" alt="Layanan Antar Jemput Laundry Surabaya 24 Jam" class="promo-img" width="600" height="600" loading="lazy">
+
             <div class="grid service-grid">
-                
-                <article class="card">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
-                    </div>
-                    <h3>Kilat 1 Jam (Ditunggu)</h3>
-                    <p>Cuci kering tanpa setrika. Solusi baju urgent untuk traveler atau seragam sekolah. Langsung pakai!</p>
-                </article>
-
-                <article class="card card-highlight">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                    </div>
-                    <h3>Express Malam 24 Jam</h3>
-                    <p>Pulang kerja malam? Drop cucian sekarang, besok pagi sudah rapi diantar. Penyelamat pekerja lembur.</p>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                    </div>
-                    <h3>Spesialis Karpet</h3>
-                    <p>Antar jemput karpet besar. Deep cleaning bebas tungau. Garansi wangi & bersih.</p>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="9" y1="22" x2="9" y2="22.01"></line><line x1="15" y1="22" x2="15" y2="22.01"></line><line x1="12" y1="22" x2="12" y2="22.01"></line></svg>
-                    </div>
-                    <h3>Linen Hotel / B2B</h3>
-                    <p>Kapasitas mesin besar. Standar higienis hotel bintang 5. Harga khusus kontrak.</p>
-                </article>
+                <div class="card">
+                    <h3>⚡ Kilat 1 Jam</h3>
+                    <p>Cuci kering tanpa setrika. Solusi baju urgent untuk traveler/seragam. Ditunggu bisa!</p>
+                </div>
+                <div class="card" style="background: #f0f9ff; border-color: var(--accent);">
+                    <h3>🌙 Express Malam</h3>
+                    <p><b>Buka 24 Jam!</b> Drop cucian malam sepulang kerja, besok pagi sudah rapi siap pakai.</p>
+                </div>
+                <div class="card">
+                    <h3>🚚 Antar Jemput 10rb</h3>
+                    <p>Flat ongkir murah se-Surabaya Barat, Timur, Selatan. Tinggal WA, kurir OTW.</p>
+                </div>
+                <div class="card">
+                    <h3>🧼 Cuci Karpet & Bedcover</h3>
+                    <p>Spesialis barang berat. Deep cleaning bebas tungau. Garansi wangi & kering sempurna.</p>
+                </div>
             </div>
         </section>
 
-        <section id="harga">
-            <h2>Daftar Harga Transparan</h2>
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                
-                <div class="pricing-table">
-                    <div class="section-header">PAKET KILOAN (CUCI SETRIKA)</div>
-                    <div class="pricing-row">
-                        <span>Harian Santai (5 Hari)</span>
-                        <span class="price">Rp 7.000/Kg</span>
-                    </div>
-                    <div class="pricing-row">
-                        <span>Reguler (3 Hari)</span>
-                        <span class="price">Rp 10.000/Kg</span>
-                    </div>
-                    <div class="pricing-row">
-                        <span>Cepat (1 Hari)</span>
-                        <span class="price">Rp 15.000/Kg</span>
-                    </div>
+        <section id="harga" style="margin-top: 3rem;">
+            <h2>Daftar Harga Resmi</h2>
+            <div class="pricing-table">
+                <div style="background: var(--primary); color: white; padding: 10px; text-align: center; font-weight: bold;">PAKET KILOAN</div>
+                <div class="pricing-row">
+                    <span>Harian (5 Hari)</span>
+                    <span class="price-val">Rp 7.000/Kg</span>
                 </div>
-
-                <div class="pricing-table">
-                    <div class="section-header">PAKET EXPRESS (PRIORITAS)</div>
-                    <div class="pricing-row">
-                        <span>Express 12 Jam</span>
-                        <span class="price">Rp 20.000/Kg</span>
-                    </div>
-                    <div class="pricing-row">
-                        <span>Super Express 4 Jam</span>
-                        <span class="price">Rp 30.000/Kg</span>
-                    </div>
-                    <div class="pricing-row" style="background: #ecfdf5;">
-                        <span>Express Malam (Selesai Pagi)</span>
-                        <span class="price">Rp 35.000/Kg</span>
-                    </div>
+                <div class="pricing-row">
+                    <span>Reguler (3 Hari)</span>
+                    <span class="price-val">Rp 10.000/Kg</span>
                 </div>
-
+                <div class="pricing-row">
+                    <span>Cepat (1 Hari)</span>
+                    <span class="price-val">Rp 15.000/Kg</span>
+                </div>
             </div>
-
-            <div class="card" style="margin-top: 2rem; background: #fffbeb; border: 1px solid #fcd34d;">
-                <strong>⚠️ Catatan Penting:</strong>
-                <ul style="margin-top: 0.5rem; font-size: 0.9rem;">
-                    <li>Minimal berat 4 Kg.</li>
-                    <li>Ongkir Flat Rp 10.000 (Ambil & Antar).</li>
-                    <li>Order diatas jam 16.00 masuk kategori Express Malam.</li>
-                    <li>Mohon info jika ada baju luntur/batik.</li>
-                </ul>
+            
+            <div class="pricing-table" style="margin-top: 1.5rem;">
+                <div style="background: var(--primary-dark); color: white; padding: 10px; text-align: center; font-weight: bold;">PAKET EXPRESS (PRIORITAS)</div>
+                <div class="pricing-row">
+                    <span>Express 12 Jam</span>
+                    <span class="price-val">Rp 20.000/Kg</span>
+                </div>
+                <div class="pricing-row">
+                    <span>Express 6 Jam</span>
+                    <span class="price-val">Rp 25.000/Kg</span>
+                </div>
+                <div class="pricing-row">
+                    <span>Super Express 4 Jam</span>
+                    <span class="price-val">Rp 30.000/Kg</span>
+                </div>
+                <div class="pricing-row" style="background: #ecfdf5;">
+                    <span>Express Malam (Pagi Jadi)</span>
+                    <span class="price-val">Rp 35.000/Kg</span>
+                </div>
             </div>
+            
+            <p class="text-center" style="font-size: 0.9rem; margin-top: 1rem;">*Minimal berat 4Kg. Info baju luntur/batik harap dipisah.</p>
         </section>
 
-        <section id="lokasi">
+        <section id="lokasi" style="margin-top: 3rem;">
             <h2>Lokasi Workshop</h2>
-            <div class="map-placeholder">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <p style="margin-top: 10px;">Jl. Pacarkembang 5/33, Tambaksari, Surabaya</p>
-                <a href="https://maps.app.goo.gl/LDnYzLKSAKGs2htL7 " target="_blank" class="map-btn">Buka Google Maps</a>
+            
+            <img src="Laundry-Express-Laundry-Antar-Jemput-Laundry-24-Jam-Surabaya-770x1024.jpg" alt="Lokasi Laundry Holic Surabaya Pacarkembang" class="shop-photo" width="770" height="1024" loading="lazy">
+            
+            <div class="card text-center">
+                <p><strong>Laundry Holic Surabaya</strong><br>
+                Jl. Pacarkembang 5/33 Kel. Pacarkembang Kec. Tambaksari, Kota Surabaya, Jawa Timur.</p>
+                
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Jl.+Pacarkembang+5/33+Surabaya" target="_blank" class="map-btn">
+                    📍 Buka Google Maps (Navigasi)
+                </a>
             </div>
         </section>
 
     </main>
 
     <div class="seo-footer">
-        <div class="container">
-            <div class="seo-title">Pencarian Terkait:</div>
-            <div class="seo-links">
-                <span class="seo-tag">Laundry Kiloan Terdekat Pacarkembang</span>
-                <span class="seo-tag">Laundry Express Surabaya Timur</span>
-                <span class="seo-tag">Jasa Cuci Karpet Antar Jemput Surabaya</span>
-                <span class="seo-tag">Laundry 24 Jam Tambaksari</span>
-                <span class="seo-tag">Cuci Linen Hotel Surabaya</span>
-                <span class="seo-tag">Laundry Satuan Jas & Batik</span>
-                <span class="seo-tag">Laundry Kilat 1 Jam Bisa Ditunggu</span>
-                <span class="seo-tag">Laundry Sepatu Surabaya</span>
-                <span class="seo-tag">Laundry Antar Jemput Murah</span>
+        <div class="container text-center">
+            <p style="font-weight: bold; margin-bottom: 10px;">Pencarian Terkait:</p>
+            <div class="seo-tags">
+                <span>Laundry Kiloan Terdekat Pacarkembang</span>
+                <span>Laundry Express Surabaya Timur</span>
+                <span>Jasa Cuci Karpet Antar Jemput Surabaya</span>
+                <span>Laundry 24 Jam Tambaksari</span>
+                <span>Cuci Linen Hotel Surabaya</span>
+                <span>Laundry Satuan Jas & Batik</span>
+                <span>Laundry Kilat 1 Jam Bisa Ditunggu</span>
+                <span>Laundry Sepatu Surabaya</span>
             </div>
-            <p style="margin-top: 2rem; text-align: center; font-size: 0.875rem;">
-                &copy; 2026 Laundry Holic Surabaya. All rights reserved.<br>
-                Jl. Pacarkembang 5/33 Kel. Pacarkembang Kec. Tambaksari, Surabaya.
-            </p>
+            <p style="margin-top: 2rem;">© 2026 Laundry Holic Surabaya. All rights reserved.</p>
         </div>
     </div>
 
-    <a href="https://wa.me/6282142313133?text=Halo%20Admin,%20mau%20tanya%20info%20laundry..." class="btn btn-wa-sticky" aria-label="Chat WhatsApp">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-        &nbsp; Chat WhatsApp
+    <a href="https://wa.me/6282142313133?text=Halo%20Admin,%20mau%20tanya%20info%20laundry..." class="btn btn-wa-sticky">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" style="margin-right: 5px;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        Chat WhatsApp
     </a>
 
 </body>
