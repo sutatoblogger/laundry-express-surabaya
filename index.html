@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Laundry Holic Surabaya - Jasa Laundry Express & Layanan 24 Jam. Mulai Rp 7.000/Kg. Antar Jemput Pacarkembang & Tambaksari. WA: 0821-4231-3133.">
+    <meta name="keywords" content="Jasa Laundry Surabaya, Laundry Express Surabaya, Laundry 24 Jam Surabaya, Laundry Holic Surabaya">
+    <title>Laundry Holic Surabaya | Express 24 Jam & Antar Jemput</title>
+    <style>
+        /* --- TITAN CORE CSS (SPEED 100) --- */
+        :root {
+            --primary: #0056b3;
+            --accent: #00c6ff;
+            --dark: #111111;
+            --light: #f4f9ff;
+            --white: #ffffff;
+            --success: #25D366;
+            --warning: #fff3cd;
+            --danger: #ffe5e5;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.6;
+            padding-bottom: 90px; /* Space untuk Sticky Button */
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .text-bold { font-weight: 700; }
+        
+        /* HERO SECTION */
+        header {
+            background: linear-gradient(180deg, #ffffff 0%, #e6f2ff 100%);
+            padding: 50px 20px 60px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            box-shadow: 0 10px 40px rgba(0, 86, 179, 0.1);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .badge-hero {
+            background: var(--danger); color: #d00000;
+            padding: 5px 15px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 1px;
+            display: inline-block; margin-bottom: 10px;
+        }
+
+        h1 { 
+            font-size: 2.2rem; line-height: 1.2; 
+            margin-bottom: 15px; color: var(--dark); 
+            font-weight: 900;
+        }
+
+        /* TITAN BEAM BUTTON */
+        .titan-btn-wrapper {
+            position: relative; display: inline-block;
+            padding: 4px; border-radius: 50px;
+            background: #ddd; overflow: hidden; z-index: 1;
+            box-shadow: 0 10px 30px rgba(0, 198, 255, 0.4);
+            margin-top: 20px;
+        }
+        .titan-btn-wrapper::before {
+            content: ''; position: absolute;
+            top: -50%; left: -50%; width: 200%; height: 200%;
+            background: conic-gradient(transparent, transparent, #00c6ff, #0056b3, transparent);
+            animation: putar 3s linear infinite; z-index: -1;
+        }
+        .titan-btn {
+            display: block; background: var(--primary); color: white;
+            padding: 16px 40px; font-size: 1.1rem; font-weight: 800;
+            border-radius: 48px; text-decoration: none; position: relative; z-index: 2;
+        }
+        @keyframes putar { 100% { transform: rotate(360deg); } }
+
+        /* BENTO GRID */
+        .section-title { font-size: 1.5rem; margin: 40px 0 20px; color: var(--dark); text-align: center; font-weight: 800;}
+        .bento-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;
+        }
+        .bento-card {
+            background: var(--white); padding: 25px; border-radius: 20px;
+            border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            transition: transform 0.2s;
+        }
+        .bento-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+        .bento-card h3 { font-size: 1.2rem; margin-bottom: 8px; color: var(--primary); }
+        .bento-card p { font-size: 0.9rem; color: #666; }
+        .icon-service { font-size: 2rem; margin-bottom: 10px; display: block; }
+        
+        /* PRICING TABLE */
+        .pricing-section {
+            background: var(--white); border-radius: 20px; padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .pricing-category {
+            font-size: 1.1rem; font-weight: 800; color: var(--dark);
+            margin: 20px 0 10px; border-bottom: 2px solid var(--accent); display: inline-block;
+        }
+        .price-row {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px 0; border-bottom: 1px dashed #eee; font-size: 0.95rem;
+        }
+        .price-row:last-child { border-bottom: none; }
+        .price-val { font-weight: 800; color: var(--primary); }
+        
+        /* NOTES BOX */
+        .notes-box {
+            background: var(--warning); padding: 15px; border-radius: 15px;
+            margin-top: 20px; font-size: 0.85rem; color: #856404;
+            border-left: 5px solid #ffc107;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark); color: #888; padding: 40px 20px 100px;
+            text-align: center; font-size: 0.85rem; margin-top: 50px; border-radius: 30px 30px 0 0;
+        }
+        .seo-hidden { font-size: 1px; color: #222; margin-top: 20px; }
+
+        /* STICKY BUTTON */
+        .sticky-wa {
+            position: fixed; bottom: 20px; left: 20px; right: 20px;
+            background: var(--success); color: white;
+            text-align: center; padding: 15px; border-radius: 50px;
+            font-weight: bold; font-size: 1.1rem; text-decoration: none;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.5); z-index: 999;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            max-width: 480px; margin: 0 auto; animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0% {transform: scale(1);} 50% {transform: scale(1.03);} 100% {transform: scale(1);} }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <span class="badge-hero">🔥 SPESIAL PELAYANAN LAUNDRY SURABAYA</span>
+            <h1>Jasa Laundry Surabaya <span style="color:var(--primary)">Express & 24 Jam</span></h1>
+            <p style="color: #666; margin-bottom: 20px;">Solusi Cuci Cepat, Bersih & Wangi. Antar Jemput Murah Hanya 10Rb!</p>
+            
+            <div class="titan-btn-wrapper">
+                <a href="https://wa.me/6282142313133?text=Halo%20Admin%20Laundry%20Holic,%20mau%20pesan%20laundry..." class="titan-btn">
+                    ORDER NOW (WA) 🚀
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <h2 class="section-title">Daftar Harga Resmi</h2>
+        <div class="pricing-section">
+            
+            <div class="pricing-category">📦 Paket Harian (Cuci Setrika)</div>
+            <div class="price-row">
+                <span>Santai (5 Hari)</span>
+                <span class="price-val">Rp 7.000/Kg</span>
+            </div>
+            <div class="price-row">
+                <span>Standar (3 Hari)</span>
+                <span class="price-val">Rp 10.000/Kg</span>
+            </div>
+            <div class="price-row">
+                <span>Cepat (1 Hari)</span>
+                <span class="price-val">Rp 15.000/Kg</span>
+            </div>
+
+            <div class="pricing-category">⚡ Paket Express</div>
+            <div class="price-row">
+                <span>Express 12 Jam</span>
+                <span class="price-val">Rp 20.000/Kg</span>
+            </div>
+            <div class="price-row">
+                <span>Express 6 Jam</span>
+                <span class="price-val">Rp 25.000/Kg</span>
+            </div>
+            <div class="price-row">
+                <span>Super Express 4 Jam</span>
+                <span class="price-val">Rp 30.000/Kg</span>
+            </div>
+
+            <div class="pricing-category">🌙 Express Malam (24 Jam)</div>
+            <div class="price-row" style="background-color: #f0f7ff;">
+                <span>Selesai Pagi (Drop Malam)</span>
+                <span class="price-val">Rp 35.000/Kg</span>
+            </div>
+            <div class="price-row" style="background-color: #fff0f0;">
+                <span>Express Malam (4-6 Jam)</span>
+                <span class="price-val">Rp 50.000/Kg</span>
+            </div>
+
+        </div>
+
+        <div class="notes-box">
+            <strong>⚠️ Catatan Penting:</strong>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+                <li>Minimal Charge 4 Kg.</li>
+                <li>Ongkir Flat Rp 10.000 (Ambil & Antar).</li>
+                <li>Order di luar jam 08.00 - 16.00 terhitung masuk <b>Express Malam</b>.</li>
+                <li>Mohon info jika ada baju luntur, batik, atau baju baru.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title">Lokasi Workshop</h2>
+        <div class="bento-card text-center">
+            <h3>📍 Laundry Holic Surabaya</h3>
+            <p>Jl. Pacarkembang 5/33 Kel. Pacarkembang Kec. Tambaksari<br>Kota Surabaya, Jawa Timur</p>
+            <div style="margin-top: 15px;">
+                <a href="https://maps.app.goo.gl/LDnYzLKSAKGs2htL7 " class="titan-btn" style="padding: 10px 20px; font-size: 0.9rem; display: inline-block; background: #333;">Lihat Google Maps</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <h3>Laundry Holic Surabaya</h3>
+        <p>Partner Laundry Terpercaya Anda</p>
+        <p class="mt-20">WA Admin: 0821-4231-3133</p>
+        
+        <div class="seo-hidden">
+            Jasa Laundry Surabaya, Laundry Express Surabaya, Laundry Karpet Antar Jemput Surabaya, Laundry 24 Jam Pacarkembang, Laundry Kiloan Tambaksari.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/6282142313133?text=Halo%20Admin%20Laundry%20Holic,%20mau%20tanya%20info%20laundry..." class="sticky-wa">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        Chat Admin (0821-4231-3133)
+    </a>
+
+</body>
+</html>
