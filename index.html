@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laundry Holic Surabaya | Laundry Express 1 Jam & Antar Jemput 24 Jam</title>
     
+    <meta name="google-site-verification" content="PASTE_KODE_VERIFIKASI_GSC_DISINI" />
     <meta name="description" content="Laundry Express Surabaya Terdekat & Buka 24 Jam. Layanan Kilat 1 Jam Selesai, Cuci Karpet Antar Jemput, & Linen Hotel. Murah Mulai Rp 7.000/Kg. WA: 0821-4231-3133.">
     <meta name="keywords" content="Laundry Holic Surabaya, Laundry Express Surabaya, Laundry Karpet Antar Jemput, Laundry 24 Jam Pacarkembang, Jasa Cuci Sofa Surabaya">
     <meta name="robots" content="index, follow">
@@ -50,9 +51,9 @@
 
     <style>
         :root {
-            --primary: #0056b3;
+            --primary: #0056b3;       /* Biru Gelap (Trust) */
             --primary-dark: #003d80;
-            --accent: #00c6ff;
+            --accent: #00c6ff;        /* Cyan Aura (Trademark Color) */
             --bg-light: #f4f9ff;
             --text-dark: #1a202c;
             --text-grey: #4a5568;
@@ -70,21 +71,23 @@
             line-height: 1.6;
             color: var(--text-dark);
             background-color: var(--bg-light);
-            padding-bottom: 90px; /* Space for Sticky CTA */
+            padding-bottom: 90px;
+            overflow-x: hidden; /* Mencegah scroll samping akibat animasi */
         }
         
         /* TYPOGRAPHY */
         h1, h2, h3 { line-height: 1.2; font-weight: 800; margin-bottom: 1rem; color: var(--primary-dark); }
         h1 { font-size: 2rem; letter-spacing: -0.025em; }
         h2 { font-size: 1.75rem; text-align: center; margin-top: 3rem; position: relative; padding-bottom: 10px; }
-        h2::after { content: ''; display: block; width: 60px; height: 4px; background: var(--accent); margin: 10px auto 0; border-radius: 2px; }
+        /* Garis bawah judul menggunakan warna aksen Aura */
+        h2::after { content: ''; display: block; width: 60px; height: 4px; background: var(--accent); margin: 10px auto 0; border-radius: 2px; box-shadow: 0 0 10px var(--accent); }
         h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
         p { margin-bottom: 1rem; color: var(--text-grey); }
         a { text-decoration: none; color: inherit; transition: 0.2s; }
         img { max-width: 100%; height: auto; display: block; border-radius: var(--radius); }
 
         /* UTILITIES */
-        .container { max-width: 800px; margin: 0 auto; padding: 0 1.25rem; } /* Max width 800px for better reading on desktop */
+        .container { max-width: 800px; margin: 0 auto; padding: 0 1.25rem; }
         .text-center { text-align: center; }
         .grid { display: grid; gap: 1.5rem; }
         
@@ -92,6 +95,14 @@
         header { background: var(--white); box-shadow: var(--shadow); position: sticky; top: 0; z-index: 40; padding: 0.5rem 0; }
         .nav-container { display: flex; align-items: center; justify-content: space-between; }
         .logo-img { height: 50px; width: auto; }
+        .brand-name { 
+            font-weight: 900; 
+            color: var(--accent); /* Warna senada logo (Cyan Aura) */
+            font-size: 1.1rem; 
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+        }
         
         .hero {
             text-align: center;
@@ -100,29 +111,57 @@
         }
         .hero-banner {
             width: 100%;
-            max-height: 250px; /* Limit height on desktop */
+            max-height: 250px;
             object-fit: cover;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
             margin-bottom: 1.5rem;
         }
         
-        /* BUTTONS */
+        /* --- AURA TRADEMARK: MOVING BEAM BUTTON --- */
+        .aura-btn-wrapper {
+            position: relative;
+            display: inline-block;
+            padding: 4px; /* Ketebalan sinar */
+            border-radius: 99px;
+            background: #e2e8f0; /* Fallback */
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 0 20px rgba(0, 198, 255, 0.4); /* Glow luar */
+        }
+        /* Efek Sinar Berputar */
+        .aura-btn-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: conic-gradient(transparent, transparent, transparent, var(--accent));
+            animation: aura-spin 3s linear infinite;
+            z-index: -1;
+        }
+        @keyframes aura-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         .btn {
             display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
             padding: 1rem 2rem; border-radius: 99px;
-            font-weight: 700; font-size: 1.125rem;
+            font-weight: 800; font-size: 1.125rem;
             color: var(--white);
             transition: transform 0.2s;
             width: 100%;
-            max-width: 350px;
+            /* max-width: 350px; Hapus limit agar full di mobile */
+            border: none;
+            cursor: pointer;
         }
         .btn-primary {
-            background: linear-gradient(to right, var(--primary), var(--accent));
-            box-shadow: 0 10px 20px -5px rgba(0, 86, 179, 0.4);
+            background: linear-gradient(to right, var(--primary), #004494);
+            position: relative; z-index: 2;
         }
-        .btn-primary:active { transform: scale(0.98); }
-        
+        .btn-primary:active { transform: scale(0.96); }
+
+        /* Sticky WA Button (Standard Pulse) */
         .btn-wa-sticky {
             position: fixed; bottom: 1.5rem; right: 1.5rem; left: 1.5rem;
             background-color: var(--success);
@@ -130,6 +169,7 @@
             box-shadow: 0 10px 15px -3px rgba(37, 211, 102, 0.4);
             animation: pulse 2s infinite;
             margin: 0 auto;
+            max-width: 400px;
         }
         @media (min-width: 640px) {
             .btn-wa-sticky { width: auto; left: auto; right: 2rem; padding: 1rem 2rem; }
@@ -142,7 +182,26 @@
             border-radius: var(--radius);
             box-shadow: var(--shadow);
             border: 1px solid rgba(0,0,0,0.05);
+            transition: transform 0.2s;
         }
+        .card:hover { transform: translateY(-5px); }
+        
+        /* AURA TRADEMARK: SPECIAL CARD (BEST SELLER) */
+        .card-aura {
+            border: 2px solid var(--accent);
+            background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 198, 255, 0.15);
+        }
+        .card-aura::after {
+            content: '★ RECOMMENDED';
+            position: absolute; top: -12px; right: 20px;
+            background: var(--accent); color: var(--primary-dark);
+            font-size: 0.75rem; font-weight: 900;
+            padding: 4px 10px; border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
         .promo-img {
             width: 100%; height: auto;
             border-radius: var(--radius);
@@ -192,8 +251,10 @@
 
     <header>
         <div class="container nav-container">
-            <img src="logo-300x300-removebg-preview-1.png" alt="Logo Laundry Holic Surabaya" class="logo-img" width="50" height="50">
-            <span style="font-weight: 800; color: var(--primary); font-size: 1.2rem;">LAUNDRY HOLIC</span>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="logo-300x300-removebg-preview-1.png" alt="Logo Laundry Holic Surabaya" class="logo-img" width="50" height="50">
+                <span class="brand-name">LAUNDRY HOLIC SURABAYA</span>
+            </div>
         </div>
     </header>
 
@@ -204,10 +265,12 @@
             <h1 class="text-center">Jasa Laundry Surabaya <span style="color: var(--primary);">Express & 24 Jam</span></h1>
             <p class="text-center">Solusi cucian numpuk? Butuh cepat 1 Jam? Kami jemput & antar! Garansi bersih, wangi, & rapi.</p>
             
-            <div class="text-center" style="margin-top: 1.5rem;">
-                <a href="https://wa.me/6282142313133?text=Halo%20Admin,%20mau%20pesan%20laundry%20antar%20jemput" class="btn btn-primary">
-                    PANGGIL KURIR SEKARANG 🚀
-                </a>
+            <div class="text-center" style="margin-top: 2rem;">
+                <div class="aura-btn-wrapper">
+                    <a href="https://wa.me/6282142313133?text=Halo%20Admin,%20mau%20pesan%20laundry%20antar%20jemput" class="btn btn-primary">
+                        PANGGIL KURIR SEKARANG 🚀
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -224,7 +287,7 @@
                     <h3>⚡ Kilat 1 Jam</h3>
                     <p>Cuci kering tanpa setrika. Solusi baju urgent untuk traveler/seragam. Ditunggu bisa!</p>
                 </div>
-                <div class="card" style="background: #f0f9ff; border-color: var(--accent);">
+                <div class="card card-aura">
                     <h3>🌙 Express Malam</h3>
                     <p><b>Buka 24 Jam!</b> Drop cucian malam sepulang kerja, besok pagi sudah rapi siap pakai.</p>
                 </div>
